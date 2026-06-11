@@ -20,3 +20,4 @@ langchain-openrouter>=0.2.1
 langserve[all]>=0.0.30
 sse-starlette>=1.6.0
 langsmith>=0.8.0
+python-dotenv>=1.0.0

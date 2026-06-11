@@ -3,7 +3,9 @@ import ssl
 import warnings
 import os
 import sys
+from dotenv import load_dotenv
 
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
 # Configure SSL before any other imports
 # Disable SSL verification globally
@@ -11,11 +13,10 @@ os.environ['PYTHONHTTPSVERIFY'] = '0'
 os.environ['CURL_CA_BUNDLE'] = ''
 os.environ['REQUESTS_CA_BUNDLE'] = ''
 
-# Set LANGSMITH_API_KEY in a .env file or as an environment variable before running
 if not os.environ.get('LANGSMITH_API_KEY'):
-    raise RuntimeError("LANGSMITH_API_KEY environment variable is not set. See .env.example.")
-os.environ['LANGSMITH_TRACING'] = 'false'
-os.environ['LANGSMITH_PROJECT'] = 'chat-app-production'
+    raise RuntimeError("LANGSMITH_API_KEY is not set. Copy chat_app/.env.example to chat_app/.env and fill in your key.")
+os.environ.setdefault('LANGSMITH_TRACING', 'false')
+os.environ.setdefault('LANGSMITH_PROJECT', 'chat-app-production')
 
 # Patch SSL module to use unverified context
 import ssl as ssl_module
