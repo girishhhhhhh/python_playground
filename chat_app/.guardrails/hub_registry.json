@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "validators": {
+    "sainatha/prompt_injection_detector": {
+      "import_path": "sainatha_grhub_prompt_injection_detector",
+      "exports": [
+        "PromptInjectionDetector"
+      ],
+      "installed_at": "2026-05-28T07:49:45.331896+00:00",
+      "package_name": "sainatha-grhub-prompt-injection-detector"
+    },
+    "guardrails/regex_match": {
+      "import_path": "guardrails_grhub_regex_match",
+      "exports": [
+        "RegexMatch"
+      ],
+      "installed_at": "2026-05-28T07:53:15.190977+00:00",
+      "package_name": "guardrails-grhub-regex-match"
+    },
+    "guardrails/toxic_language": {
+      "import_path": "guardrails_grhub_toxic_language",
+      "exports": [
+        "ToxicLanguage"
+      ],
+      "installed_at": "2026-05-28T08:06:31.665766+00:00",
+      "package_name": "guardrails-grhub-toxic-language"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+# Secrets
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+*.so
+*.dylib
+venv/
+.venv/
+env/
+.env
+*.env
+
+# Node / Frontend
+node_modules/
+.pnp
+.pnp.js
+dist/
+build/
+.next/
+out/
+.cache/
+.turbo/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
